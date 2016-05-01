@@ -9,4 +9,4 @@ The [Hacking with React](http://www.hackingwithreact.com) code is located in: `h
 webpack-dev-server
 ```
 
-Currently reading: [Lesson 26/42](http://www.hackingwithreact.com/read/1/14/cleaning-up-and-preparing-for-a-real-project).
+Currently reading: [Lesson 19/42](http://www.hackingwithreact.com/read/1/19/refactoring-our-ajax-code-dont-repeat-yourself).
