@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import ajax from 'superagent';
 
 class Detail extends React.Component {
@@ -39,7 +40,7 @@ class Detail extends React.Component {
 
       return (
         <p key={ index }>
-          <strong>{ author }</strong>:
+          <Link to={`/user/${author}`}><strong>{ author }</strong></Link>:
           <br/>
           <a href={ commit.html_url }>{ commit.commit.message }</a>.
         </p>
@@ -53,7 +54,7 @@ class Detail extends React.Component {
 
       return (
         <p key={ index }>
-          <strong>{ owner }</strong>: forked to <a href={ fork.html_url }>{ fork.html_url }</a> at { fork.created_at }.
+          <Link to={`/user/${owner}`}><strong>{ owner }</strong></Link>: forked to <a href={ fork.html_url }>{ fork.html_url }</a> at { fork.created_at }.
         </p>
       );
     });
@@ -65,7 +66,8 @@ class Detail extends React.Component {
 
       return (
         <p key={ index }>
-          <strong>{ user }</strong>:
+
+          <Link to={`/user/${user}`}><strong>{ user }</strong></Link>:
           <br/>
           <a href={ pull.html_url }>{ pull.body }</a>.
         </p>
