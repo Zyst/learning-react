@@ -1,22 +1,23 @@
 import React from 'react';
-import Chance from 'chance';
+import ajax from 'superagent';
 
 class Detail extends React.Component {
 
   constructor(props) {
     super(props);
 
-    const people = [];
+    this.state = { commits: [] };
+  }
 
-    // We create 10 random people
-    for (let i = 0; i < 10; i++) {
-      people.push({
-        name: chance.first(),
-        country: chance.country({ full: true })
+  componentWillMount() {
+    ajax.get('https://api.github.com/repos/facebook/react/commits')
+      .end((error, response) => {
+        if(!error && response) {
+          this.setState({ commits: response.body });
+        } else {
+          console.log('There was an error fetching from Github.');
+        }
       });
-    }
-
-    this.state = { people };
   }
 
   buttonClicked() {
@@ -30,24 +31,17 @@ class Detail extends React.Component {
   render() {
     return (
       <div>
-        <h1>
-          Hello, people.
-          Here's a list of all of you:
-        </h1>
-
-
-
-        <ul>
-          { this.state.people.map((person, index) => (
-            <li key={ index }>Person #{ index + 1 }: { person.name } from { person.country }</li>
-          )) }
-        </ul>
-          
-        <button
-          onClick={this.buttonClicked.bind(this)}>
-          Meet Someone New
-        </button>
-
+        <h2>
+          If <a href="http://motherfuckingwebsite.com/">Motherfucking website</a> is to be believed,
+          this is the ultimate aesthetic. Not me being lazy.
+        </h2>
+        { this.state.commits.map((commit, index) => (
+          <p key={index}>
+            <strong>{ commit.author ? commit.author.login : 'Anonymous' }</strong>
+            <br/>
+            <a href={ commit.html_url }>{ commit.commit.message }</a>
+          </p>
+        ))}
       </div>
     );
   }
