@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, IndexLink } from 'react-router';
 import ajax from 'superagent';
 
 class User extends React.Component{
@@ -37,6 +38,8 @@ class User extends React.Component{
 
     return (
       <div>
+        <p>You are here:
+          <IndexLink to="/" activeClassName="active">Home</IndexLink> > {this.props.params.user}</p>
         <h2>{this.props.params.user}</h2>
         <div>
           { commits }
