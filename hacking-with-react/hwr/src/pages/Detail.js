@@ -11,7 +11,7 @@ class Detail extends React.Component {
       mode: 'commits',
       commits: [],
       forks: [],
-      pulls: []
+      pulls: [],
     };
   }
 
@@ -36,11 +36,15 @@ class Detail extends React.Component {
         } else {
           console.log(`Error fetching ${type}`, error);
         }
-      })
+      });
   }
 
   saveFeed(type, contents) {
     this.setState({ [type]: contents });
+  }
+
+  selectMode(mode) {
+    this.setState({ mode });
   }
 
   renderCommits() {
@@ -48,10 +52,10 @@ class Detail extends React.Component {
       const author = commit.author ? commit.author.login : 'Anonymous';
 
       return (
-        <p key={ index }>
-          <Link to={`/user/${author}`}><strong>{ author }</strong></Link>:
-          <br/>
-          <a href={ commit.html_url }>{ commit.commit.message }</a>.
+        <p key={index}>
+          <Link to={`/user/${author}`}><strong>{author}</strong></Link>:
+          <br />
+          <a href={commit.html_url}>{commit.commit.message}</a>.
         </p>
       );
     });
@@ -62,8 +66,8 @@ class Detail extends React.Component {
       const owner = fork.owner ? fork.owner.login : 'Anonymous';
 
       return (
-        <p key={ index } className="github">
-          <Link to={`/user/${owner}`}><strong>{ owner }</strong></Link>: forked to <a href={ fork.html_url }>{ fork.html_url }</a> at { fork.created_at }.
+        <p key={index} className="github">
+          <Link to={`/user/${owner}`}><strong>{owner}</strong></Link>: forked to <a href={fork.html_url}>{fork.html_url}</a> at {fork.created_at}.
         </p>
       );
     });
@@ -74,23 +78,19 @@ class Detail extends React.Component {
       const user = pull.user ? pull.user.login : 'Anonymous';
 
       return (
-        <p key={ index }>
+        <p key={index}>
 
-          <Link to={`/user/${user}`}><strong>{ user }</strong></Link>:
-          <br/>
-          <a href={ pull.html_url }>{ pull.body }</a>.
+          <Link to={`/user/${user}`}><strong>{user}</strong></Link>:
+          <br />
+          <a href={pull.html_url}>{pull.body}</a>.
         </p>
       );
     });
   }
 
-  selectMode(mode) {
-    this.setState({ mode });
-  }
-
   render() {
     let content;
-    
+
     if (this.state.mode === 'commits') {
       content = this.renderCommits();
     } else if (this.state.mode === 'forks') {
@@ -98,32 +98,38 @@ class Detail extends React.Component {
     } else {
       content = this.renderPulls();
     }
-    
+
     return (
       <div>
         <p>
-          You are here: <IndexLink to="/" activeClassName="active">
-            Home </IndexLink> > { this.props.params.repo }
+          You are here: <IndexLink to="/" activeClassName="active"> Home </IndexLink> > {this.props.params.repo}
         </p>
         <button
-          onClick={ this.selectMode.bind(this, 'commits') }
-          ref="commits">
+          onClick={this.selectMode.bind(this, 'commits')}
+          ref="commits"
+        >
           Show Commits
         </button>
         <button
-          onClick={ this.selectMode.bind(this, 'forks') }
-          ref="forks">
+          onClick={this.selectMode.bind(this, 'forks')}
+          ref="forks"
+        >
           Show Forks
         </button>
         <button
-          onClick={ this.selectMode.bind(this, 'pulls') }
-          ref="pulls">
+          onClick={this.selectMode.bind(this, 'pulls')}
+          ref="pulls"
+        >
           Show Pulls
         </button>
-        { content }
+        {content}
       </div>
     );
   }
 }
+
+Detail.propTypes = {
+  params: React.PropTypes.object,
+};
 
 export default Detail;

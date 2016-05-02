@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, IndexLink } from 'react-router';
 
-class List extends React.Component{
+class List extends React.Component {
   render() {
     return (
       <div>
