@@ -1,5 +1,5 @@
 # Learning React
-A repository where I drop code I create as I learn React, currently working on [Hacking with React](http://www.hackingwithreact.com).
+A repository where I drop code I create as I learn React, just finished [Hacking with React](http://www.hackingwithreact.com).
 
 ## Hacking with React
 
@@ -9,4 +9,16 @@ The [Hacking with React](http://www.hackingwithreact.com) code is located in: `h
 webpack-dev-server
 ```
 
-Currently reading: [Lesson 31/42](http://www.hackingwithreact.com/read/1/31/the-first-80-is-done-now-what).
+Tests can be run with:
+
+```bash
+npm run test
+```
+
+Link can be run with: 
+
+```bash
+npm run lint
+```
+
+**Book Complete**
