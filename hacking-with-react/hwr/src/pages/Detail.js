@@ -22,16 +22,25 @@ class Detail extends React.Component {
   }
 
   fetchFeed(type) {
+    if (this.props.params.repo === '') {
+      // Empty repo for testing, bail!
+      return;
+    }
+
     const baseUrl = 'https://api.github.com/repos/facebook';
 
     ajax.get(`${baseUrl}/${this.props.params.repo}/${type}`)
       .end((error, response) => {
         if (!error && response) {
-          this.setState({ [type]: response.body });
+          this.saveFeed(type, response.body);
         } else {
           console.log(`Error fetching ${type}`, error);
         }
       })
+  }
+
+  saveFeed(type, contents) {
+    this.setState({ [type]: contents });
   }
 
   renderCommits() {
@@ -53,7 +62,7 @@ class Detail extends React.Component {
       const owner = fork.owner ? fork.owner.login : 'Anonymous';
 
       return (
-        <p key={ index }>
+        <p key={ index } className="github">
           <Link to={`/user/${owner}`}><strong>{ owner }</strong></Link>: forked to <a href={ fork.html_url }>{ fork.html_url }</a> at { fork.created_at }.
         </p>
       );
@@ -97,15 +106,18 @@ class Detail extends React.Component {
             Home </IndexLink> > { this.props.params.repo }
         </p>
         <button
-          onClick={ this.selectMode.bind(this, 'commits') }>
+          onClick={ this.selectMode.bind(this, 'commits') }
+          ref="commits">
           Show Commits
         </button>
         <button
-          onClick={ this.selectMode.bind(this, 'forks') }>
+          onClick={ this.selectMode.bind(this, 'forks') }
+          ref="forks">
           Show Forks
         </button>
         <button
-          onClick={ this.selectMode.bind(this, 'pulls') }>
+          onClick={ this.selectMode.bind(this, 'pulls') }
+          ref="pulls">
           Show Pulls
         </button>
         { content }
