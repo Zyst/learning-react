@@ -1,5 +1,5 @@
 # Learning React
-A repository where I drop code I create as I learn React I'm now working on the [official facebook tutorial](https://facebook.github.io/react/docs/tutorial.html).
+A repository where I drop code I create as I learn React I finished the Official Facebook Tutorial and Hacking with React.
 
 ## Official facebook tutorial
 The [Official facebook tutorial](https://facebook.github.io/react/docs/tutorial.html) code is located in `facebook-react-tutorial/react-tutorial` and can be run with any of the following.:
@@ -43,6 +43,8 @@ perl server.pl
 ```
 
 And visit <http://localhost:3000/>. Try opening multiple tabs!
+
+**Exercise Complete**
 
 
 ## Hacking with React
