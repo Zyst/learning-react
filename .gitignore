@@ -69,6 +69,7 @@ jspm_packages
 # IntelliJ
 /out/
 
+/github-profile-viewer/src/components/GithubSuperSecrets.js
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
@@ -84,3 +85,6 @@ fabric.properties
 .idea
 
 .DS_Store
+
+learning-react.sublime-workspace
+learning-react.sublime-project
