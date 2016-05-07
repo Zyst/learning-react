@@ -1,5 +1,35 @@
 # Learning React
-A repository where I drop code I create as I learn React I finished the Official Facebook Tutorial and Hacking with React.
+A repository where I drop code I create as I learn React I finished the Official Facebook Tutorial and Hacking with React. Currently doing exercises.
+
+## Github profile viewer
+
+A github profile and repositories viewer. You can enter type new users at the top and it will load them, and it looks fairly pretty.
+
+Everything used more than once is an individual component, and this is when I started to use stateless components a bit more heavily. 
+
+![Project screenshot](assets/github-profile-viewer.png)
+
+## Hacking with React
+
+The [Hacking with React](http://www.hackingwithreact.com) code is located in: `hacking-with-react/hwr` and it can be run with:
+
+```bash
+webpack-dev-server
+```
+
+Tests can be run with:
+
+```bash
+npm run test
+```
+
+Link can be run with: 
+
+```bash
+npm run lint
+```
+
+**Book Complete**
 
 ## Official facebook tutorial
 The [Official facebook tutorial](https://facebook.github.io/react/docs/tutorial.html) code is located in `facebook-react-tutorial/react-tutorial` and can be run with any of the following.:
@@ -45,26 +75,3 @@ perl server.pl
 And visit <http://localhost:3000/>. Try opening multiple tabs!
 
 **Exercise Complete**
-
-
-## Hacking with React
-
-The [Hacking with React](http://www.hackingwithreact.com) code is located in: `hacking-with-react/hwr` and it can be run with:
-
-```bash
-webpack-dev-server
-```
-
-Tests can be run with:
-
-```bash
-npm run test
-```
-
-Link can be run with: 
-
-```bash
-npm run lint
-```
-
-**Book Complete**
