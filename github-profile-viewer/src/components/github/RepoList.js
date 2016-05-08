@@ -5,7 +5,7 @@ import Repo from './Repo';
 
 class RepoList extends React.Component {
   render() {
-    return(
+    return (
       <div>
         <ul className="list-group">
           {

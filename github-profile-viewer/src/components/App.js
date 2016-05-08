@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import Profile from './github/Profile';
 import Search from './github/Search';
@@ -14,13 +13,6 @@ class App extends React.Component {
       userRepos: [],
       perPage: 10,
     };
-  }
-
-  handleFormSubmit(username) {
-    this.setState({ username }, () => {
-      this.getUserData();
-      this.getUserRepos();
-    });
   }
 
   // Get user data from github
@@ -43,9 +35,16 @@ class App extends React.Component {
 
         alert('Not found');
 
-        console.log(`xhr: ${xhr}, status: ${status}, 
+        console.log(`xhr: ${xhr}, status: ${status},
           error: ${err}`);
       }.bind(this),
+    });
+  }
+
+  handleFormSubmit(username) {
+    this.setState({ username }, () => {
+      this.getUserData();
+      this.getUserRepos();
     });
   }
 
@@ -59,17 +58,17 @@ class App extends React.Component {
         &sort=created`,
       dataType: 'json',
       cache: false,
-      success: function(data) {
+      success: function (data) {
         this.setState({
           userRepos: data,
         });
       }.bind(this),
-      error: function(xhr, status, err) {
+      error: function (xhr, status, err) {
         this.setState({
           userName: null,
         });
 
-        console.log(`xhr: ${xhr}, status: ${status}, 
+        console.log(`xhr: ${xhr}, status: ${status},
           error: ${err}`);
       }.bind(this),
     });
