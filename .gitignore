@@ -88,3 +88,5 @@ fabric.properties
 
 learning-react.sublime-workspace
 learning-react.sublime-project
+
+/movie-finder/dist
