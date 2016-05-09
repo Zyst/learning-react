@@ -1,9 +1,15 @@
 # Learning React
 A repository where I drop code I create as I learn React I finished the Official Facebook Tutorial and Hacking with React. Currently doing exercises.
 
+## IMDB movie finder (With Flux)
+
+A movie finder that uses the IMDB API. While the application itself is quite trivial this was my first Flux application.
+
+![Project screenshot](assets/imdb-movie-flux.png)
+
 ## Dynamic quiz application
 
-An application that creates quizes 100% dynamically based on structured JSON input. 
+An application that creates quizzes 100% dynamically based on structured JSON input.
 
 ###Question
 ![Project screenshot](assets/react-quiz-question.png)
@@ -15,7 +21,7 @@ An application that creates quizes 100% dynamically based on structured JSON inp
 
 A github profile and repositories viewer. You can enter type new users at the top and it will load them, and it looks fairly pretty.
 
-Everything used more than once is an individual component, and this is when I started to use stateless components a bit more heavily. 
+Everything used more than once is an individual component, and this is when I started to use stateless components a bit more heavily.
 
 ![Project screenshot](assets/github-profile-viewer.png)
 
@@ -33,7 +39,7 @@ Tests can be run with:
 npm run test
 ```
 
-Link can be run with: 
+Link can be run with:
 
 ```bash
 npm run lint
