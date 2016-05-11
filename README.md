@@ -1,6 +1,12 @@
 # Learning React
 A repository where I drop code I create as I learn React I finished the Official Facebook Tutorial and Hacking with React. Currently doing exercises.
 
+## Firebase contact list
+
+A Create/Read/Update/Delete React + Flux application with persistence using Firebase.
+
+![Project screenshot](assets/firebase-contact-list.png)
+
 ## IMDB movie finder (With Flux)
 
 A movie finder that uses the IMDB API. While the application itself is quite trivial this was my first Flux application.
