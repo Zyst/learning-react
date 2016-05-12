@@ -1,6 +1,12 @@
 # Learning React
 A repository where I drop code I create as I learn React I finished the Official Facebook Tutorial and Hacking with React. Currently doing exercises.
 
+## InfoSearch
+
+A React + Flux app that connects to the [Duck Duck Go API](https://duckduckgo.com/api) and does quick searches on it.
+
+![Project animation](assets/info-finder.webm)
+
 ## Sticky notes
 
 A Create/Read/Delete React + Flux application with persistence using MongoDB. Double clicking a post-it deletes it.
