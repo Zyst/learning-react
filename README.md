@@ -1,6 +1,24 @@
 # Learning React
 A repository where I drop code I create as I learn React I finished the Official Facebook Tutorial and Hacking with React. Currently doing exercises.
 
+## Sticky notes
+
+A Create/Read/Delete React + Flux application with persistence using MongoDB. Double clicking a post-it deletes it.
+
+![Project screenshot](assets/sticky-notes.png)
+
+To deploy you'll need to create a file called **AppSecrets.js** in the `src/utils` with the following content:
+
+**AppSecrets.js**
+```js
+const Secrets = {
+  mongo: 'super-secret-mongolab-api-key-here',
+};
+
+export default Secrets;
+
+```
+
 ## Firebase contact list
 
 A Create/Read/Update/Delete React + Flux application with persistence using Firebase.

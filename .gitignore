@@ -90,3 +90,5 @@ learning-react.sublime-workspace
 learning-react.sublime-project
 
 /movie-finder/dist
+
+/sticky-notes/src/utils/AppSecrets.js
