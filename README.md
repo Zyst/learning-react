@@ -5,7 +5,7 @@ A repository where I drop code I create as I learn React I finished the Official
 
 A React + Flux app that connects to the [Duck Duck Go API](https://duckduckgo.com/api) and does quick searches on it.
 
-![Project animation](assets/info-finder.webm)
+![Project animation](assets/info-finder.gif)
 
 ## Sticky notes
 
