@@ -6,7 +6,6 @@
   },
   "extends": "airbnb",
   "rules": {
-    "quotes": [2, "single"],
-    "no-underscore-dangle": 0
+    "quotes": [2, "single"]
   }
 }
