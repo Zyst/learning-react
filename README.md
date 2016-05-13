@@ -1,6 +1,34 @@
 # Learning React
 A repository where I drop code I create as I learn React I finished the Official Facebook Tutorial and Hacking with React. Currently doing exercises.
 
+## Socket Chat
+
+Example node output:
+
+A [socket.io](socket.io) based chat room made in React. Users select a username and start chatting.
+
+![Project screenshot](assets/socket-io-p1.png)
+
+![Project screenshot](assets/socket-io-p2.png)
+
+When you haven't selected an username you can see the messages but you can not comment
+![Project screenshot](assets/socket-io-p3.png)
+
+Server output looks like this:
+```sh
+Server is running on port 3000
+Connected: 1 sockets connected.
+Connected: 2 sockets connected.
+Connected: 3 sockets connected.
+Zyst has joined the chat room
+John has joined the chat room
+Mark has joined the chat room
+Mark has disconnected.
+Disconnected: 2 sockets connected.
+John has disconnected.
+Disconnected: 1 sockets connected.
+```
+
 ## InfoSearch
 
 A React + Flux app that connects to the [Duck Duck Go API](https://duckduckgo.com/api) and does quick searches on it.
