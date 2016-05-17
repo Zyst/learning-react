@@ -29,6 +29,12 @@ John has disconnected.
 Disconnected: 1 sockets connected.
 ```
 
+## Local Storage Workout Logger
+
+A React/Flux workout logger that saves to Local Storage. I actually had never used Local Storage, so this was a super interesting project to do.
+
+![Project animation](assets/local-storage-workout-logger.gif)
+
 ## InfoSearch
 
 A React + Flux app that connects to the [Duck Duck Go API](https://duckduckgo.com/api) and does quick searches on it.

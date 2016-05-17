@@ -1,5 +1,8 @@
 const AppConstants = {
-
+  SHOW_FORM: 'SHOW_FORM',
+  ADD_WORKOUT: 'ADD_WORKOUT',
+  RECEIVE_WORKOUTS: 'RECEIVE_WORKOUTS',
+  DELETE_WORKOUT: 'DELETE_WORKOUT',
 };
 
 export default AppConstants;
