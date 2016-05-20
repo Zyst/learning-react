@@ -46,7 +46,7 @@ class App extends React.Component {
         <div className="col-md-2">
           <div className="card">
             <div className="card-block">
-              <StocksContainer />
+              <StocksContainer stocks={this.state.stocks} />
             </div>
           </div>
         </div>

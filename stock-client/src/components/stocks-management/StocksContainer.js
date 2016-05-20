@@ -9,7 +9,7 @@ class StocksContainer extends React.Component {
       <div className="container-fluid">
         <StocksForm />
         <hr />
-        <StocksList />
+        <StocksList stocks={this.props.stocks} />
       </div>
     );
   }
