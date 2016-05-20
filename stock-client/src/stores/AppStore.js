@@ -4,7 +4,7 @@ import { EventEmitter } from 'events';
 
 const CHANGE_EVENT = 'change';
 
-let _items = [];
+let stocks = [];
 
 class AppStoreClass extends EventEmitter {
   emitChange() {
