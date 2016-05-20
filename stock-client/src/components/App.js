@@ -1,5 +1,6 @@
 import React from 'react';
 import AppStore from '../stores/AppStore';
+import AppAPI from '../utils/AppAPI';
 import AppActions from '../actions/AppActions';
 
 import StocksGraph from './stocks-display/StocksGraph';
@@ -7,7 +8,7 @@ import StocksContainer from './stocks-management/StocksContainer';
 
 function getAppState() {
   return {
-
+    stocks: AppStore.getStocks(),
   };
 }
 
@@ -16,10 +17,14 @@ class App extends React.Component {
     super(props);
 
     this.state = getAppState();
+
+    this.onChange = this.onChange.bind(this);
   }
 
   componentDidMount() {
     AppStore.addChangeListener(this.onChange);
+
+    AppAPI.getStocks();
   }
 
   onChange() {

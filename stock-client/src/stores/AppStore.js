@@ -1,5 +1,6 @@
 import AppDispatcher from '../dispatcher/AppDispatcher';
 import AppConstants from '../constants/AppConstants';
+import AppAPI from '../utils/AppAPI';
 import { EventEmitter } from 'events';
 
 const CHANGE_EVENT = 'change';
@@ -7,6 +8,18 @@ const CHANGE_EVENT = 'change';
 let stocks = [];
 
 class AppStoreClass extends EventEmitter {
+  setStocks(incomingStocks) {
+    stocks = incomingStocks;
+  }
+
+  addStock(stock) {
+    stocks.push(stock);
+  }
+
+  getStocks() {
+    return stocks;
+  }
+
   emitChange() {
     this.emit(CHANGE_EVENT);
   }
@@ -25,8 +38,16 @@ const AppStore = new AppStoreClass();
 AppDispatcher.register((payload) => {
   const action = payload.action;
 
-  if (action.actionType) {
-    return 'yes';
+  if (action.actionType === AppConstants.ADD_STOCK) {
+    AppStore.addStock(action.stock);
+
+    AppAPI.addStock(action.stock);
+
+    AppStore.emit(CHANGE_EVENT);
+  } else if (action.actionType === AppConstants.RECEIVE_STOCKS) {
+    AppStore.setStocks(action.stocks);
+
+    AppStore.emit(CHANGE_EVENT);
   }
 
   return true;
