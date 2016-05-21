@@ -14,6 +14,12 @@ const AppActions = {
       stocks,
     });
   },
+  deleteStock(stockId) {
+    AppDispatcher.handleViewAction({
+      actionType: AppConstants.DELETE_STOCK,
+      stockId,
+    });
+  },
 };
 
 export default AppActions;

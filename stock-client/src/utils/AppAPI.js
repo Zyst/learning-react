@@ -12,6 +12,14 @@ const AppAPI = {
 
     AppActions.receiveStocks(stocks);
   },
+
+  deleteStock(stockId) {
+    let stocks = JSON.parse(localStorage.getItem('stocks')) || [];
+
+    stocks = stocks.filter(s => s.id !== stockId);
+
+    localStorage.setItem('stocks', JSON.stringify(stocks));
+  },
 };
 
 export default AppAPI;

@@ -12,7 +12,13 @@ class StocksForm extends React.Component {
   onSubmit(e) {
     e.preventDefault();
 
-    AppActions.addStock(this.refs.stock.value.trim());
+    const stock = {
+      id: Date.now(),
+      name: this.refs.stock.value.trim(),
+      values: [],
+    };
+
+    AppActions.addStock(stock);
 
     this.refs.stock.value = '';
   }

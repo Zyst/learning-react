@@ -25,3 +25,12 @@ body {
 .jumbotron {
   /*min-height: 600px;*/
 }
+
+.delete-stocks {
+  cursor: pointer;
+  color: #ddd;
+}
+
+.delete-stocks:hover {
+  color: red;
+}

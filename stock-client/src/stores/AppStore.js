@@ -20,6 +20,10 @@ class AppStoreClass extends EventEmitter {
     return stocks;
   }
 
+  deleteStock(stockId) {
+    this.setStocks(stocks.filter(s => s.id !== stockId));
+  }
+
   emitChange() {
     this.emit(CHANGE_EVENT);
   }
@@ -46,6 +50,12 @@ AppDispatcher.register((payload) => {
     AppStore.emit(CHANGE_EVENT);
   } else if (action.actionType === AppConstants.RECEIVE_STOCKS) {
     AppStore.setStocks(action.stocks);
+
+    AppStore.emit(CHANGE_EVENT);
+  } else if (action.actionType === AppConstants.DELETE_STOCK) {
+    AppStore.deleteStock(action.stockId);
+
+    AppAPI.deleteStock(action.stockId);
 
     AppStore.emit(CHANGE_EVENT);
   }
