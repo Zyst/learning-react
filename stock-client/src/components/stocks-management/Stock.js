@@ -14,10 +14,48 @@ class Stock extends React.Component {
   }
 
   render() {
+    const values = this.props.stock.values;
+    let classForStock = '';
+    let arrowForStock = '';
+    let percentage = '';
+
+    // Positive number
+    if (values.length > 0 && values[values.length - 1].change_percent > 0) {
+      classForStock = 'text-success';
+      arrowForStock = <span className="fa fa-arrow-up"></span>;
+      percentage = <span>{values[values.length - 1].change_percent}%</span>;
+    } else if (values.length === 0 || values[values.length - 1].change_percent === 0) {
+      classForStock = 'text-info';
+      arrowForStock = <span className="fa fa-arrow-right"></span>;
+      if (values.length !== 0) {
+        percentage = <span>{values[values.length - 1].change_percent}%</span>;
+      }
+    } else {
+      classForStock = 'text-danger';
+      arrowForStock = <span className="fa fa-arrow-down"></span>;
+      percentage = <span>{values[values.length - 1].change_percent}%</span>;
+    }
+
     return (
       <div className="row">
         <div className="col-lg-10">
-          <h4>{this.props.stock.name}</h4>
+          <div className="row">
+            <div className="col-lg-4">
+              <h4 className={classForStock}>
+                {this.props.stock.name}
+              </h4>
+            </div>
+            <div className="col-lg-4">
+              <h4 className={classForStock}>
+                {percentage}
+              </h4>
+            </div>
+            <div className="col-lg-3">
+              <h4 className={classForStock}>
+                {arrowForStock}
+              </h4>
+            </div>
+          </div>
         </div>
         <div className="col-lg-2">
           <span
@@ -26,6 +64,7 @@ class Stock extends React.Component {
           >
           </span>
         </div>
+        <hr />
       </div>
     );
   }

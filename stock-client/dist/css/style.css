@@ -34,3 +34,7 @@ body {
 .delete-stocks:hover {
   color: red;
 }
+
+span {
+  padding-left: 10px;
+}

@@ -58,6 +58,10 @@ AppDispatcher.register((payload) => {
     AppAPI.deleteStock(action.stockId);
 
     AppStore.emit(CHANGE_EVENT);
+  } else if (action.actionType === AppConstants.GET_REMOTE_STOCK) {
+    AppAPI.getRemoteStockValue(action.stock);
+
+    AppStore.emit(CHANGE_EVENT);
   }
 
   return true;

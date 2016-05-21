@@ -35,7 +35,7 @@ class StocksForm extends React.Component {
           />
           <span className="input-group-btn">
             <button className="btn btn-success" type="submit">
-              <span className="fa fa-send-o"></span>
+              <i className="fa fa-send-o"></i>
             </button>
           </span>
         </div>

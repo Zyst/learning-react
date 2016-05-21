@@ -20,6 +20,13 @@ const AppActions = {
       stockId,
     });
   },
+
+  getRemoteStockValue(stock) {
+    AppDispatcher.handleViewAction({
+      actionType: AppConstants.GET_REMOTE_STOCK,
+      stock,
+    });
+  },
 };
 
 export default AppActions;

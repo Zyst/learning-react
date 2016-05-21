@@ -1,6 +1,7 @@
 import React from 'react';
 import AppStore from '../stores/AppStore';
 import AppAPI from '../utils/AppAPI';
+import AppActions from '../actions/AppActions';
 
 import StocksGraph from './stocks-display/StocksGraph';
 import StocksContainer from './stocks-management/StocksContainer';
@@ -24,6 +25,7 @@ class App extends React.Component {
     AppStore.addChangeListener(this.onChange);
 
     AppAPI.getStocks();
+    AppAPI.updateStockValues();
   }
 
   onChange() {
@@ -37,12 +39,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="row">
-        <div className="col-lg-8 col-lg-offset-2">
+        <div className="col-lg-8 col-lg-offset-1">
           <div className="jumbotron">
             <StocksGraph />
           </div>
         </div>
-        <div className="col-lg-2">
+        <div className="col-lg-3">
           <div className="card">
             <div className="card-block">
               <StocksContainer stocks={this.state.stocks} />
