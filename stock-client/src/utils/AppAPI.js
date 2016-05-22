@@ -81,7 +81,7 @@ const AppAPI = {
 
     setTimeout(() => {
       this.updateStockValues();
-    }, 100000);
+    }, 10000);
   },
 };
 

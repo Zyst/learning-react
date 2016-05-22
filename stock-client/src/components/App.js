@@ -41,7 +41,7 @@ class App extends React.Component {
       <div className="row">
         <div className="col-lg-8 col-lg-offset-1">
           <div className="jumbotron">
-            <StocksGraph />
+            <StocksGraph stocks={this.state.stocks} />
           </div>
         </div>
         <div className="col-lg-3">
