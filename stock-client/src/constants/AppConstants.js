@@ -1,8 +1,0 @@
-const AppConstants = {
-  ADD_STOCK: 'ADD_STOCK',
-  RECEIVE_STOCKS: 'RECEIVE_STOCKS',
-  DELETE_STOCK: 'DELETE_STOCK',
-  GET_REMOTE_STOCK: 'GET_REMOTE_STOCK',
-};
-
-export default AppConstants;
