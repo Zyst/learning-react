@@ -1,6 +1,10 @@
 # Learning React
 A repository where I drop code I create as I learn React I finished the Official Facebook Tutorial and Hacking with React. Currently doing exercises.
 
+## The new Facebook React tutorial
+
+Facebook updated their [tutorial](https://facebook.github.io/react/tutorial/tutorial.html) recently! Giving it a go for fun.
+
 ## Stocks App
 
 I made an app that gets stocks values and then realized that the API never actually changes in real time, so it was always going to be a linear graph so I got depressed and deleted it. However, it looks very pretty so I might as well upload the screenshot.
