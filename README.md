@@ -3,7 +3,9 @@ A repository where I drop code I create as I learn React I finished the Official
 
 ## The new Facebook React tutorial
 
-Facebook updated their [tutorial](https://facebook.github.io/react/tutorial/tutorial.html) recently! Giving it a go for fun.
+Facebook updated their [tutorial](https://facebook.github.io/react/tutorial/tutorial.html) recently! Gave it a go for fun.
+
+[Here's a link](https://s.codepen.io/ericnakagawa/debug/ALxakj) to the Facebook finished product. I went along the tutorial anonymously.
 
 ## Stocks App
 
