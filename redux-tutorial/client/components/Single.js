@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 class Single extends Component {
   render() {
@@ -7,8 +7,8 @@ class Single extends Component {
       <div className="single-photo">
         I'm the single grid
       </div>
-    );
+    )
   }
 }
 
-export default Single;
+export default Single

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 class Main extends Component {
   render() {
@@ -12,7 +12,7 @@ class Main extends Component {
         </h1>
         {React.cloneElement(this.props.children, this.props)}
       </div>
-    );
+    )
   }
 }
 

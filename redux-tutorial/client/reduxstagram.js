@@ -1,14 +1,14 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 // Import CSS
-import css from './styles/style.styl';
+import css from './styles/style.styl'
 
 // Import Components
-import Main from './components/Main';
-import Single from './components/Single';
-import PhotoGrid from './components/PhotoGrid';
+import Main from './components/Main'
+import Single from './components/Single'
+import PhotoGrid from './components/PhotoGrid'
 
 const router = (
   <Router history={browserHistory}>
@@ -19,4 +19,4 @@ const router = (
   </Router>
 );
 
-render(router, document.getElementById('root'));
+render(router, document.getElementById('root'))
