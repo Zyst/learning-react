@@ -31,9 +31,10 @@ const Photo = ({
         <p>{post.caption}</p>
 
         <div className="control-buttons">
-          <button className="likes">
+          <button onClick={increment.bind(null, i)} className="likes">
             &hearts; {post.likes}
           </button>
+
           <Link to={`/view/${post.code}`} className="button">
             <span className="comment-count">
               <span className="speech-bubble"></span>
