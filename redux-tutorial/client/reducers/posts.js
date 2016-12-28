@@ -1,5 +1,5 @@
 function posts(state = [], action) {
-  console.log(state, action)
+  console.log('The post will change', state, action)
   return state
 }
 
